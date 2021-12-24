@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Handling</title>
+	<style type="text/css">
+		input{
+			display: block;
+		}
+	</style>
+
+</head>
+<body>
+	<h1>Javascript Form Handling</h1>
+	<form action="order.html" method="post" onsubmit="return validateForm();">
+		<label>Name:</label>
+		<input type="text" name="userName" id="userName">
+		<label>Age:</label>
+		<input type="text" name="userAge" id="userAge">
+		<input type="submit" value="Send Information" id="submit">
+	</form>
+
+
+	<script type="text/javascript">
+		function validateForm() {
+			 let age = document.getElementById('userAge');
+			 if (age.value < 18) {
+			 	alert("Age is less than 18. You are not an adult.");
+			 	return false;
+			 }
+			 alert("Age is valid.");
+			 return true;
+		}
+	</script>
+</body>
+</html>

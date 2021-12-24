@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image blue load</title>
+    <style>
+        .blue{
+            filter: blur(500px);
+            transition:2s all;
+        }
+        .noblue{
+            
+            transition:5s all;
+        }
+    </style>
+</head>
+<body>
+    
+    <img class="blur" src="ines-gohringer-y1s2odj7I00-unsplash edited.jpg" alt="" width="1100" >
+    <!-- <img src="ines-gohringer-y1s2odj7I00-unsplash.jpg" alt="" width="1100"> -->
+
+    <script>
+        var image = document.images[0]
+        var bigimage = document.createElement('img')
+        bigimage.onload = function(){
+            image.src = this.src
+            bigimage.className = ('noblur')
+        }
+
+        setTimeout(function(){
+bigimage.src = "ines-gohringer-y1s2odj7I00-unsplash.jpg"
+},1000        )
+        
+
+    </script>
+</body>
+</html>

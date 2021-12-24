@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J Query</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(function(){ 
+            $("#btn1").show();
+            $("#btn2").hide();
+
+            $("button").click(function(){
+                // $("p").hide();
+                $("p").css('opacity', '0');
+                $("#btn1").hide();
+                $("#btn2").show();
+                
+               
+            });
+            $("#btn2").click(function(){
+
+                $("p").css('opacity', '1');
+                $("#btn1").show();
+                $("#btn2").hide();
+                $("p").show();
+
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>A Heading</h1>
+    <p>paragraph</p>
+    <p>another paragraph</p>
+    <button id="btn1">Click me to hide paragraph</button>
+    <button id="btn2">Click me to show paragraph</button>
+    
+</body>
+</html>

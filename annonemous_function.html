@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Object</title>
+	<style>
+		body{
+			text-align: center;
+		}
+		button{
+			display: block;
+			margin:auto;
+		}
+	</style>
+</head>
+<body>
+	
+	<button onclick="person.display();">Show</button>
+
+
+
+	<script type="text/javascript">
+		var person = {
+			name : "U Soe Maung",
+			age : 49,
+			address : "Pazontaung",
+
+			display : function () {
+				document.write(person.name + " is live in "+ person.address);
+			}
+		}
+
+		// person.display();
+	</script>
+</body>
+</html>

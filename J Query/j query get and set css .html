@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+           var btn1 = $('.btn1')
+           var btn2 = $('.btn2')
+           var h1 = $('h1')
+           var p1 = $('#p1')
+           var p2 = $('#p2')
+           var p3 = $('#p3')
+           var p = $('p')
+           var btn3 = $('.btn3')
+
+           btn1.click(function(){
+             alert("font-size :"+ h1.css("font-size"))  ;
+             alert("text-shadow:"+ h1.css("text-shadow"))  ;
+           })
+           btn2.click(function(){
+                p1.css({"background-color" : "yellow" ,"text-align" : "center","padding":"3rem","margin":"0px" })
+                p2.css({"background-color" : "green" ,"text-align" : "center","padding":"3rem","margin":"0px" })
+                p3.css({"background-color" : "red" ,"text-align" : "center","padding":"3rem","margin":"0px" })
+           })
+           btn3.click(function(){
+               alert("width  :"+p.width());
+               alert("height :"+p.height());
+               alert("inner width  :"+p.innerWidth());
+               alert("inner height :"+p.innerHeight());
+               alert("outer width  :"+p.outerWidth());
+               alert("outer height :"+p.outerHeight());
+           })
+           
+        })
+    </script>
+    <!-- <style>
+        .color{
+            color:blueviolet;
+        }
+        .important{
+            font-size:3rem;
+            font-weight:bloder;
+        }
+    </style> -->
+</head>
+<body>
+    <h1 style="color:white ;font-size: 2rem; text-shadow:3px 3px 10px black;">Myanmar</h1>
+    <p id="p1">lorem</p>
+    <p id="p2">lorem</p>
+    <p id="p3">lorem</p>
+    
+    <button class="btn1">Get css</button>
+    <button class="btn2">Set bg color </button>
+    <button class="btn3">get width and height </button>
+    
+</body>
+</html>

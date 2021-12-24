@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+           var btn1 = $('.btn1')
+           var btn2 = $('.btn2')
+           var btn3 = $('.btn3')
+           var h1 = $('h1')
+           var p = $('p')
+
+           btn1.click(function(){
+                h1.addClass("color")
+                p.addClass("important")
+           })
+           btn2.click(function(){
+                h1.removeClass("color")
+                p.removeClass("important")
+           })
+           btn3.click(function(){
+                h1.toggleClass("color")
+                p.toggleClass("important")
+           })
+        })
+    </script>
+    <style>
+        .color{
+            color:blueviolet;
+        }
+        .important{
+            font-size:3rem;
+            font-weight:bloder;
+        }
+    </style>
+</head>
+<body>
+    <h1>Heading</h1>
+    <p>Important</p>
+    <p>Important 2</p>
+    <button class="btn1">Add class</button>
+    <button class="btn2">Remove class</button>
+    <button class="btn3">Toggle class</button>
+</body>
+</html>

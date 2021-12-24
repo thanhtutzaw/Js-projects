@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+            var div = $('div')
+            var h1 = $('h1')
+            // var p = $('p')
+            var btn1 = $('#btn1')
+            var btn2 = $('#btn2')
+            
+
+            btn1.click(function(){
+                div.empty(div)
+            });
+            btn2.click(function(){
+                h1.remove(".h1")
+            });
+            
+            
+        })
+    </script>
+</head>
+<body>
+    <div style="border: 3px orange dotted; text-align: center; margin:auto; padding: 10px; background-color: pink;">
+
+        <h1 class="h11">Good night</h1>
+        <h1 class="h1">Good morning</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi id nisi recusandae reprehenderit </p>
+    </div>
+    <button id="btn1">Empty Text(Child)</button>
+    <button id="btn2">Empty Heading</button>
+    
+
+</body>
+</html>

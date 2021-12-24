@@ -1,0 +1,25 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+    // var stop = $("#stop");
+  $("#start").click(function(){
+      var div = $('div');
+      div.css('background-color','cyan').css('transition','all .8s ease-in-out').animate({borderRadius:"15px",height:"200px"},"slow");
+
+    
+  });
+  
+
+});
+</script> 
+</head>
+<body>
+
+<button id="start">Start</button>
+<div style="width: 200px; height:400px; background-color: green;"></div>
+</html>

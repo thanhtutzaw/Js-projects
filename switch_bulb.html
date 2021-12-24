@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>toggle event</title>
+	<style>
+		#note{
+			/*width: 100px;
+			height: 100px;*/
+			display: block;
+			/*margin: 10px auto 10px auto;*/
+			margin:auto;
+			border: 1px solid #000;
+		}
+		button{
+			color:white;
+			background-color: green;
+			/*color: green;*/
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	</style>	
+</head>
+<body>
+	<div id="note">
+		<img src="off.jpg" alt="">
+	</div>
+	<button onclick="toggle(this.innerHTML)">Switch On!</button>
+
+
+	<script>
+		function toggle(btntxt) {
+			// alert(btntxt);
+			let div = document.getElementById('note');
+			let img = document.getElementsByTagName('img')[0];
+			let btn = document.getElementsByTagName('button')[0];
+			
+			if (btntxt === "Switch On!") {
+				// div.style.backgroundColor = "yellow";
+				img.src="on.jpg";
+				btn.innerHTML = "Switch Off!";
+				btn.style.backgroundColor = "red";
+			}else{
+				// div.style.backgroundColor = "#dddddd";
+				img.src = "off.jpg";
+				btn.innerHTML = "Switch On!";
+				btn.style.backgroundColor = "green";
+			}			
+		}
+	</script>
+</body>
+</html>

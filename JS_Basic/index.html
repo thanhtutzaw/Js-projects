@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <style>
+        #note{
+            width:200px;
+            height:200px;
+            margin:auto;
+            border-radius:5px;
+        }
+    </style>
+</head>
+<body class="text-center">
+    <div id="note" class="bg-danger my-4"></div>
+    <button id="growth" class="btn btn-success">Growth</button>
+    <button id="shrink" class="btn btn-success">Shrink</button>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    
+<script>
+    
+    $(document).ready(function(){
+        $div = $('#note');
+        $growth = $('#growth');
+        $shrink = $('#shrink');
+        let width = $div.width();
+
+        $growth.click(function(){
+            growth(width);
+        })
+        $shrink.click(function(){
+            shrink(width);
+        })
+        
+        function growth(width){
+            width = $div.width();
+            // borderRadius = $div.borderRadius();
+            $div.css({width:`${width*2}px`});
+            // document.getElementById('note').style.borderRadius=`${20*2}px`;
+            // $div.css({borderRadius:`${borderRadius*2}px`});
+        }
+        function shrink(width){
+            width = $div.width();
+            $div.css({width:`${width/2}px`});
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM Manipulation</title>	
+</head>
+<body>
+	<h1>DOM ID Selector</h1>
+	<ul>
+		<li>item-1</li>
+		<li id="note">item-2</li>
+		<li>item-3</li>
+	</ul>
+	<button onclick="click_handler();">Click Me</button>
+
+
+	<script type="text/javascript">
+		function click_handler() {
+			var element = document.getElementById('note');
+			// alert(element);
+			element.style.backgroundColor = "#dddddd";
+			element.style.color = "#ffffcc";
+		}
+	</script>
+</body>
+</html>

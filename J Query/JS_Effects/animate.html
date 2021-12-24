@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+    // var stop = $("#stop");
+  $("#start").click(function(){
+    var div = $("div");
+    
+    var g = $("#g");
+    
+    div.animate({width: '300px',borderRadius:'10px', opacity: '0.8'}, "slow");
+    div.animate({height: '100px', opacity: '1'}, "slow");
+    div.animate({width: '100px',borderRadius:'20px', opacity: '0.8'}, "slow");
+    div.animate({height: '100px',borderRadius:'20px', opacity: '1'}, "slow");
+    div.animate({width: '100px', opacity: '1'}, "slow");
+     g.animate({opacity:'0'},"slow");
+    g.animate({opacity:'1'},"slow");
+  });
+  $("#stop").click(function(){
+     div.stop(goToEnd);
+
+  })
+});
+</script> 
+</head>
+<body>
+
+<button id="start">Start</button>
+<button id="stop">Stop</button>
+
+<div style="margin:1rem;background:#bf6d21;height:100px;width:100px;position:absolute;"><p style="color:white;padding:1.2rem;opacity:0;position:absolute;" id="g">Good</p></div>
+
+</body>
+</html>

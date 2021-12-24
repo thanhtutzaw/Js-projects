@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM Manipulation</title>
+	<style type="text/css">
+		table,button{
+			margin: 10px auto;
+		}
+		button{
+			display: block;
+		}
+	</style>
+	
+</head>
+<body>
+	<table border="1" cellpadding="10" cellspacing="0">
+		<tr id="header">
+			<th>Name</th>
+			<th>Rank</th>
+			<th>Address</th>
+		</tr>
+		<tr class="note">
+			<td>U Hla Kyaw</td>
+			<td>Manager</td>
+			<td>Mayangone</td>
+		</tr>
+		<tr>
+			<td>U Hla Kyaw</td>
+			<td>Manager</td>
+			<td>Mayangone</td>
+		</tr>
+		<tr class="note">
+			<td>U Hla Kyaw</td>
+			<td>Manager</td>
+			<td>Mayangone</td>
+		</tr>
+		<tr>
+			<td>U Hla Kyaw</td>
+			<td>Manager</td>
+			<td>Mayangone</td>
+		</tr>
+	</table>
+	<button onclick="change_color();">Change Table Color</button>
+
+	<script type="text/javascript">
+		function change_color() {
+			let header = document.getElementById('header');
+			header.style.backgroundColor = "#191970";
+			header.style.color = "#ffffff";
+
+			let elements = document.getElementsByClassName('note');
+			// alert(elements.length);
+			for (let i = 0; i < elements.length; i++) {
+				let element = elements[i];
+				change_bg(element); //another function call
+			}
+		}
+		function change_bg(tdata) {
+			tdata.style.backgroundColor = "#669999";
+			tdata.style.color = "#ffffff";
+		}
+	</script>
+</body>
+</html>

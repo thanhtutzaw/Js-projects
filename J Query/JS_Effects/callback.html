@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+    $("button").click(function(){
+
+    
+    
+    $('div').animate({fontSize:'3rem'},"slow",function(){
+        alert('font size changed');
+    }
+
+    )
+})
+});
+</script> 
+</head>
+<body>
+
+<button id="start">Start</button>
+<h2>Change Font Size</h2>
+<div>
+<p style="color:blue;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi nesciunt!!</p>
+</div>
+
+
+</body>
+</html>
